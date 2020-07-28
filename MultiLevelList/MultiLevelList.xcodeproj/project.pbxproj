@@ -23,6 +23,8 @@
 		F2847F9824CFB5750046D347 /* ZJYNodeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2847F9724CFB5750046D347 /* ZJYNodeTableViewController.swift */; };
 		F2847F9B24CFB6120046D347 /* Optional+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2847F9A24CFB6120046D347 /* Optional+Extension.swift */; };
 		F2847F9E24CFB69C0046D347 /* ZJYBaseGroupedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2847F9D24CFB69C0046D347 /* ZJYBaseGroupedTableViewController.swift */; };
+		F2847FA624CFC7300046D347 /* ZJYBaseNodeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2847FA524CFC7300046D347 /* ZJYBaseNodeCell.swift */; };
+		F2847FA824CFC75A0046D347 /* ZJYBaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2847FA724CFC75A0046D347 /* ZJYBaseTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,8 @@
 		F2847F9724CFB5750046D347 /* ZJYNodeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZJYNodeTableViewController.swift; sourceTree = "<group>"; };
 		F2847F9A24CFB6120046D347 /* Optional+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+Extension.swift"; sourceTree = "<group>"; };
 		F2847F9D24CFB69C0046D347 /* ZJYBaseGroupedTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZJYBaseGroupedTableViewController.swift; sourceTree = "<group>"; };
+		F2847FA524CFC7300046D347 /* ZJYBaseNodeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZJYBaseNodeCell.swift; sourceTree = "<group>"; };
+		F2847FA724CFC75A0046D347 /* ZJYBaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZJYBaseTableViewCell.swift; sourceTree = "<group>"; };
 		F624884314AE94C9A57B65A7 /* Pods-MultiLevelList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MultiLevelList.release.xcconfig"; path = "Target Support Files/Pods-MultiLevelList/Pods-MultiLevelList.release.xcconfig"; sourceTree = "<group>"; };
 		FFBA11D3BB1C143768058F58 /* Pods_MultiLevelList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MultiLevelList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -190,9 +194,10 @@
 		F2847F9224CFB5220046D347 /* case1 */ = {
 			isa = PBXGroup;
 			children = (
-				F2847F9324CFB5480046D347 /* ZJYCellNodeModel.swift */,
-				F2847F9524CFB55E0046D347 /* ZJYNodeCell.swift */,
 				F2847F9724CFB5750046D347 /* ZJYNodeTableViewController.swift */,
+				F2847FA524CFC7300046D347 /* ZJYBaseNodeCell.swift */,
+				F2847F9524CFB55E0046D347 /* ZJYNodeCell.swift */,
+				F2847F9324CFB5480046D347 /* ZJYCellNodeModel.swift */,
 			);
 			path = case1;
 			sourceTree = "<group>";
@@ -209,6 +214,7 @@
 			isa = PBXGroup;
 			children = (
 				F2847F9D24CFB69C0046D347 /* ZJYBaseGroupedTableViewController.swift */,
+				F2847FA724CFC75A0046D347 /* ZJYBaseTableViewCell.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -392,11 +398,13 @@
 				F2847F9124CFB3DC0046D347 /* ZJYTabBarViewController.swift in Sources */,
 				F2847F9B24CFB6120046D347 /* Optional+Extension.swift in Sources */,
 				F2847F9624CFB55E0046D347 /* ZJYNodeCell.swift in Sources */,
+				F2847FA824CFC75A0046D347 /* ZJYBaseTableViewCell.swift in Sources */,
 				F2847F6124CFB2C50046D347 /* ViewController.swift in Sources */,
 				F2847F9424CFB5480046D347 /* ZJYCellNodeModel.swift in Sources */,
 				F2847F5D24CFB2C50046D347 /* AppDelegate.swift in Sources */,
 				F2847F9E24CFB69C0046D347 /* ZJYBaseGroupedTableViewController.swift in Sources */,
 				F2847F5F24CFB2C50046D347 /* SceneDelegate.swift in Sources */,
+				F2847FA624CFC7300046D347 /* ZJYBaseNodeCell.swift in Sources */,
 				F2847F9824CFB5750046D347 /* ZJYNodeTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

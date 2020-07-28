@@ -176,10 +176,26 @@ extension ZJYNodeTableViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
+        reloadSelectedCell(indexPath)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
+    }
+    
+    /**
+     * 这里要求本类的cell都继承于 ZJYBaseNodeCell,便于使用 ZJYBaseNodeCell 的公共属性: 如 isExpand
+     */
+    func reloadSelectedCell(_ indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath) as! ZJYBaseNodeCell
+        cell.node.expand == false ? cell.expandBtn.setImage(UIImage.init(named: "expand"), for: .normal) : cell.expandBtn.setImage(UIImage.init(named: "noExpand"), for: .normal)
+        cell.node.expand = !cell.node.expand
+        if cell.node.expand == true && cell.node.level < MaxLevel {
+            self.expandChildrenNodesLevel(cell.node.level, indexPath)
+        }
+        else if cell.node.expand == false && cell.node.level < MaxLevel {
+            self.hiddenChildrenNodesLevel(cell.node.level, indexPath)
+        }
     }
 }
 

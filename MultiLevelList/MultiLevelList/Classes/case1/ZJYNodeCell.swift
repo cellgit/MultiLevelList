@@ -17,9 +17,9 @@ protocol ZJYNodeCellDelegate: NSObjectProtocol {
 }
 
 
-class ZJYNodeCell: UITableViewCell {
-    // 结点
-    open var node: ZJYCellNodeModel!
+class ZJYNodeCell: ZJYBaseNodeCell {
+//    // 结点
+//    open var node: ZJYCellNodeModel!
     // cell的位置
     open var cellIndexPath: IndexPath!
     // cell的宽高
@@ -30,8 +30,8 @@ class ZJYNodeCell: UITableViewCell {
     
     // 选中按钮
     private lazy var selectedBtn = UIButton.init(type: .custom)
-    // 展开按钮
-    private lazy var expandBtn = UIButton.init(type: .custom)
+//    // 展开按钮
+//    private lazy var expandBtn = UIButton.init(type: .custom)
     // 名字
     private lazy var nameLabel = UILabel.init()
     // 细线
@@ -39,13 +39,13 @@ class ZJYNodeCell: UITableViewCell {
     
     
     
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-        
-        initial()
-    }
+//    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+//        super.init(style: style, reuseIdentifier: reuseIdentifier)
+//
+//        initial()
+//    }
     
-    func initial() {
+    override func initial() {
         contentView.addSubview(selectedBtn)
         contentView.addSubview(expandBtn)
         contentView.addSubview(nameLabel)
@@ -77,20 +77,20 @@ class ZJYNodeCell: UITableViewCell {
         
     }
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
+//    required init?(coder: NSCoder) {
+//        fatalError("init(coder:) has not been implemented")
+//    }
+//
+//    override func awakeFromNib() {
+//        super.awakeFromNib()
+//        // Initialization code
+//    }
+//
+//    override func setSelected(_ selected: Bool, animated: Bool) {
+//        super.setSelected(selected, animated: animated)
+//
+//        // Configure the view for the selected state
+//    }
 
 }
 

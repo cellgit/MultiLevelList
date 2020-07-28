@@ -6,7 +6,6 @@
 //  Copyright © 2020 刘宏立. All rights reserved.
 //
 
-import Foundation
 import UIKit
 import SnapKit
 
