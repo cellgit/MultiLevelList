@@ -22,8 +22,6 @@ class ZJYBaseGroupedTableViewController: UIViewController, UITableViewDelegate {
         
         initialTableView()
         layoutTableView()
-        requestData()
-        fixEdgePanGestureRecognizer()
     }
     
     func initialTableView() {
@@ -31,7 +29,6 @@ class ZJYBaseGroupedTableViewController: UIViewController, UITableViewDelegate {
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 55
         tableView.showsVerticalScrollIndicator = false
-//        tableView.register(UITableViewCell.self)
         tableView.delegate = self
     }
     
@@ -39,29 +36,6 @@ class ZJYBaseGroupedTableViewController: UIViewController, UITableViewDelegate {
         tableView.snp.makeConstraints { (make) in
             make.edges.equalTo(view)
         }
-    }
-    
-    func requestData() {
-        
-    }
-
-}
-
-extension ZJYBaseGroupedTableViewController {
-    /**
-     * 修正可能的侧滑手势冲突
-     * 注意: 这里只写了UITableView的和BaseViewController侧滑手势冲突处理,
-     *     ScrollView,TableView,CollectionView都是需要处理的, 以为它们都自带 panGestureRecognizer
-     */
-    func fixEdgePanGestureRecognizer() {
-        //获取所有的手势
-        let gestureList = self.navigationController?.view.gestureRecognizers
-        gestureList?.forEach({ [weak self](gesture) in
-            if gesture.isKind(of: UIScreenEdgePanGestureRecognizer.self) {
-                //当是侧滑手势的时候设置panGestureRecognizer需要UIScreenEdgePanGestureRecognizer失效才生效即可
-                self?.tableView.panGestureRecognizer.require(toFail: gesture)
-            }
-        })
     }
 }
 

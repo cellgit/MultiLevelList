@@ -111,7 +111,6 @@ extension ZJYNodeTableViewController {
                 break
             }
         }
-//        datalist.removeSubrange(deleteLocation..<deleteLocation+length)
         datalist.removeSubrange(deleteLocation..<deleteLocation+length)
         tableView.beginUpdates()
         tableView.deleteRows(at: deleteNodeRows, with: .none)
@@ -206,10 +205,11 @@ extension ZJYNodeTableViewController: ZJYNodeCellDelegate {
     }
     
     func nodeCellExpand(cell: ZJYNodeCell, expand: Bool, indexPath: IndexPath) {
-//        expand == true ? self.expandChildrenNodesLevel(cell.node.level, indexPath) : self.hiddenChildrenNodesLevel(cell.node.level, indexPath)
-        if expand == true {
+        expand == true ? self.expandChildrenNodesLevel(cell.node.level, indexPath) : self.hiddenChildrenNodesLevel(cell.node.level, indexPath)
+        if cell.node.expand == true && cell.node.level < MaxLevel {
             self.expandChildrenNodesLevel(cell.node.level, indexPath)
-        }else{
+        }
+        else if cell.node.expand == false && cell.node.level < MaxLevel {
             self.hiddenChildrenNodesLevel(cell.node.level, indexPath)
         }
     }
