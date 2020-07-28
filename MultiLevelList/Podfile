@@ -1,0 +1,10 @@
+platform :ios, '13.0'
+
+target 'MultiLevelList' do
+use_frameworks!
+
+pod 'SwiftyJSON', '~> 5.0.0'
+pod 'SnapKit', '~> 5.0.1'
+
+
+end
